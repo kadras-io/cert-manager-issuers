@@ -19,5 +19,5 @@ spec:
     - test.kadras.io
   issuerRef:
     name: kadras-ca-issuer
-    kind: Issuer
+    kind: ClusterIssuer
     group: cert-manager.io
