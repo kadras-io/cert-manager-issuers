@@ -1,7 +1,7 @@
 #@data/values-schema
 ---
 
-#@schema/desc "The namespace where Cert Manager is deployed."
+#@schema/desc "The namespace where cert-manager is deployed."
 #@schema/validation min_len=1
 namespace: cert-manager
 
@@ -11,3 +11,6 @@ letsencrypt:
   include: false
   #@schema/desc "Whether to use Let's Encrypt staging, recommended for non-production environments."
   staging: true
+  #@schema/desc "The email address that Let's Encrypt will use to send info on expiring certificates or issues."
+  #@schema/validation min_len=5, when=lambda _, ctx: ctx.parent["include"]
+  email: ""

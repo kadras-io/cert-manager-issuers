@@ -14,10 +14,10 @@ jobs:
     uses: kadras-io/github-reusable-workflows/.github/workflows/package-release.yml@main
     with:
       package-name-slug: cert-manager-issuers
-      package-name-display: Cert Manager Issuers
+      package-name-display: cert-manager-issuers
       registry-server: ghcr.io
       registry-username: ${{ github.actor }}
       image: ${{ github.repository }}
-      version: 0.1.0
+      version: 0.2.0
     secrets:
       pull-request-token: ${{ secrets.GH_ORG_PAT }}
