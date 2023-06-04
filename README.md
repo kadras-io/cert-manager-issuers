@@ -105,7 +105,7 @@ The cert-manager-issuers package has the following configurable properties.
 | `namespace` | `cert-manager` | The namespace where cert-manager is deployed. |
 | `letsencrypt.include` | `false` | Whether to include a ClusterIssuer for Let's Encrypt. |
 | `letsencrypt.staging` | `true` | Whether to use Let's Encrypt staging, recommended for non-production environments. |
-| `letsencrypt.email` | `true` | The email address that Let's Encrypt will use to send info on expiring certificates or issues. |
+| `letsencrypt.email` | `""` | The email address that Let's Encrypt will use to send info on expiring certificates or issues. |
 
 </details>
 
