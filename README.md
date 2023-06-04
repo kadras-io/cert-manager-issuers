@@ -1,4 +1,4 @@
-# Cert Manager Issuers
+# cert-manager-issuers
 
 ![Test Workflow](https://github.com/kadras-io/cert-manager-issuers/actions/workflows/test.yml/badge.svg)
 ![Release Workflow](https://github.com/kadras-io/cert-manager-issuers/actions/workflows/release.yml/badge.svg)
@@ -6,7 +6,7 @@
 [![The Apache 2.0 license badge](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Follow us on Twitter](https://img.shields.io/static/v1?label=Twitter&message=Follow&color=1DA1F2)](https://twitter.com/kadrasIO)
 
-A Carvel package providing a collection of issuers for Cert Manager, used by the Kadras platform to support TLS via a private CA or Let's Encrypt.
+A Carvel package providing a collection of issuers for cert-manager, used by the Kadras platform to support TLS via a private CA or Let's Encrypt.
 
 ## 🚀&nbsp; Getting Started
 
@@ -23,7 +23,7 @@ A Carvel package providing a collection of issuers for Cert Manager, used by the
 
 ### Dependencies
 
-Cert Manager Issuers requires the [Cert Manager](https://github.com/kadras-io/package-for-cert-manager) package. You can install it from the [Kadras package repository](https://github.com/kadras-io/kadras-packages).
+cert-manager-issuers requires the [cert-manager](https://github.com/kadras-io/package-for-cert-manager) package. You can install it from the [Kadras package repository](https://github.com/kadras-io/kadras-packages).
 
 ### Installation
 
@@ -37,7 +37,7 @@ Add the Kadras [package repository](https://github.com/kadras-io/kadras-packages
   ```
 
 <details><summary>Installation without package repository</summary>
-The recommended way of installing the Cert Manager Issuers package is via the Kadras <a href="https://github.com/kadras-io/kadras-packages">package repository</a>. If you prefer not using the repository, you can add the package definition directly using <a href="https://carvel.dev/kapp/docs/latest/install"><code>kapp</code></a> or <code>kubectl</code>.
+The recommended way of installing the cert-manager-issuers package is via the Kadras <a href="https://github.com/kadras-io/kadras-packages">package repository</a>. If you prefer not using the repository, you can add the package definition directly using <a href="https://carvel.dev/kapp/docs/latest/install"><code>kapp</code></a> or <code>kubectl</code>.
 
   ```shell
   kubectl create namespace kadras-packages
@@ -47,7 +47,7 @@ The recommended way of installing the Cert Manager Issuers package is via the Ka
   ```
 </details>
 
-Install the Cert Manager Issuers package:
+Install the cert-manager-issuers package:
 
   ```shell
   kctrl package install -i cert-manager-issuers \
@@ -72,11 +72,11 @@ Verify the installed packages and their status:
 ## 📙&nbsp; Documentation
 
 Documentation, tutorials and examples for this package are available in the [docs](docs) folder.
-For documentation specific to Cert Manager, check out [cert-manager.io](https://cert-manager.io).
+For documentation specific to cert-manager, check out [cert-manager.io](https://cert-manager.io).
 
 ## 🎯&nbsp; Configuration
 
-The Cert Manager Issuers package can be customized via a `values.yml` file.
+The cert-manager-issuers package can be customized via a `values.yml` file.
 
   ```yaml
   letsencrypt:
@@ -95,13 +95,13 @@ Reference the `values.yml` file from the `kctrl` command when installing or upgr
 
 ### Values
 
-The Cert Manager Issuers package has the following configurable properties.
+The cert-manager-issuers package has the following configurable properties.
 
 <details><summary>Configurable properties</summary>
 
 | Config | Default | Description |
 |-------|-------------------|-------------|
-| `namespace` | `cert-manager` | The namespace where Cert Manager is deployed. |
+| `namespace` | `cert-manager` | The namespace where cert-manager is deployed. |
 | `letsencrypt.include` | `false` | Whether to include a ClusterIssuer for Let's Encrypt. |
 | `letsencrypt.staging` | `true` | Whether to use Let's Encrypt staging, recommended for non-production environments. |
 

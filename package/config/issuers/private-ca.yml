@@ -16,13 +16,13 @@ metadata:
   namespace: #@ data.values.namespace
 spec:
   isCA: true
-  commonName: Kadras CA
+  commonName: kadras
   secretName: kadras-root-ca
   duration: 8760h #! 365 days
   renewBefore: 360h #! 15 days
   subject:
     organizations:
-    - Kadras
+    - kadras
   privateKey:
     algorithm: Ed25519
     encoding: PKCS8
