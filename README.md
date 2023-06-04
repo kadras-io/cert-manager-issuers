@@ -6,13 +6,13 @@
 [![The Apache 2.0 license badge](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Follow us on Twitter](https://img.shields.io/static/v1?label=Twitter&message=Follow&color=1DA1F2)](https://twitter.com/kadrasIO)
 
-A Carvel package providing a collection of issuers for cert-manager, used by the Kadras platform to support TLS via a private CA or Let's Encrypt.
+A Carvel package providing a collection of issuers for [cert-manager](https://github.com/kadras-io/package-for-cert-manager), used by the Kadras platform to support TLS via a private CA or Let's Encrypt.
 
 ## 🚀&nbsp; Getting Started
 
 ### Prerequisites
 
-* Kubernetes 1.24+
+* Kubernetes 1.25+
 * Carvel [`kctrl`](https://carvel.dev/kapp-controller/docs/latest/install/#installing-kapp-controller-cli-kctrl) CLI.
 * Carvel [kapp-controller](https://carvel.dev/kapp-controller) deployed in your Kubernetes cluster. You can install it with Carvel [`kapp`](https://carvel.dev/kapp/docs/latest/install) (recommended choice) or `kubectl`.
 
@@ -81,6 +81,7 @@ The cert-manager-issuers package can be customized via a `values.yml` file.
   ```yaml
   letsencrypt:
     include: true
+    email: cert.info@example.com
   ```
 
 Reference the `values.yml` file from the `kctrl` command when installing or upgrading the package.
@@ -104,6 +105,7 @@ The cert-manager-issuers package has the following configurable properties.
 | `namespace` | `cert-manager` | The namespace where cert-manager is deployed. |
 | `letsencrypt.include` | `false` | Whether to include a ClusterIssuer for Let's Encrypt. |
 | `letsencrypt.staging` | `true` | Whether to use Let's Encrypt staging, recommended for non-production environments. |
+| `letsencrypt.email` | `true` | The email address that Let's Encrypt will use to send info on expiring certificates or issues. |
 
 </details>
 
