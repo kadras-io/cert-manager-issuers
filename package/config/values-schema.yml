@@ -11,6 +11,6 @@ letsencrypt:
   include: false
   #@schema/desc "Whether to use Let's Encrypt staging, recommended for non-production environments."
   staging: true
-  #@schema/desc "The email address that Let's Encrypt will use to send info on expiring certificates or issues."
+  #@schema/desc "The email address that Let's Encrypt will use to send info on expiring certificates or other issues."
   #@schema/validation min_len=5, when=lambda _, ctx: ctx.parent["include"]
   email: ""

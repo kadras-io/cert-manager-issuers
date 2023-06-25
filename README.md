@@ -2,7 +2,7 @@
 
 ![Test Workflow](https://github.com/kadras-io/cert-manager-issuers/actions/workflows/test.yml/badge.svg)
 ![Release Workflow](https://github.com/kadras-io/cert-manager-issuers/actions/workflows/release.yml/badge.svg)
-[![The SLSA Level 3 badge](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev/spec/v0.1/levels)
+[![The SLSA Level 3 badge](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev/spec/v1.0/levels)
 [![The Apache 2.0 license badge](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Follow us on Twitter](https://img.shields.io/static/v1?label=Twitter&message=Follow&color=1DA1F2)](https://twitter.com/kadrasIO)
 
@@ -104,7 +104,7 @@ The cert-manager-issuers package has the following configurable properties.
 | `namespace` | `cert-manager` | The namespace where cert-manager is deployed. |
 | `letsencrypt.include` | `false` | Whether to include a ClusterIssuer for Let's Encrypt. |
 | `letsencrypt.staging` | `true` | Whether to use Let's Encrypt staging, recommended for non-production environments. |
-| `letsencrypt.email` | `""` | The email address that Let's Encrypt will use to send info on expiring certificates or issues. |
+| `letsencrypt.email` | `""` | The email address that Let's Encrypt will use to send info on expiring certificates or other issues. |
 
 </details>
 
