@@ -12,7 +12,11 @@ spec:
   template:
     spec:
       deploy:
-      - kapp: {}
+      - kapp:
+          rawOptions:
+          - --wait-timeout=5m
+          - --kube-api-qps=25
+          - --kube-api-burst=50
       fetch:
       - git: {}
       template:
