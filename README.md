@@ -7,7 +7,7 @@
 [![Follow us on Twitter](https://img.shields.io/static/v1?label=Twitter&message=Follow&color=1DA1F2)](https://twitter.com/kadrasIO)
 
 > **Warning**
-> This package has been archived. Issuers are noew included in the [cert-manager](https://github.com/kadras-io/package-for-cert-manager) package.
+> This package has been archived. Issuers are now included in the [cert-manager](https://github.com/kadras-io/package-for-cert-manager) package.
 
 A Carvel package providing a collection of issuers for [cert-manager](https://github.com/kadras-io/package-for-cert-manager), used by the Kadras platform to support TLS via a private CA or Let's Encrypt.
 
